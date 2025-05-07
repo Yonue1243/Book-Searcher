@@ -1,0 +1,59 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root variables */
+:root {
+  --primary-color: #4caf50;
+  --secondary-color: #ffffff;
+  --background-color: #f4f4f4;
+  --font-family: 'Roboto', sans-serif;
+}
+
+/* Global styles */
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.generos {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.generos-items{
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  flex: 1 1 calc(20% - 10px);
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
