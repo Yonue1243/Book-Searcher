@@ -9,7 +9,7 @@ function App() {
 
 
   const avanzarPantalla = () => {
-    const orden = ['inicio', 'emociones', 'otraVista', 'final']; // nombres reales
+    const orden = ['inicio', 'emociones', 'tamanio', 'libros']; // nombres reales
     const siguienteIndex = (orden.indexOf(pantallaActual) + 1) % orden.length;
     const siguientePantalla = orden[siguienteIndex];
 
@@ -18,11 +18,12 @@ function App() {
   };
 
   const textosBoton = {
-    inicio: 'Ir a Vista 1',
-    uno: 'Ir a Vista 2',
-    dos: 'Ir a Vista 3',
-    tres: 'Volver al Inicio',
+    inicio: 'Ir a Emociones',
+    emociones: 'Ir a Tamaño',
+    tamanio: 'Ver Libros Recomendados',
+    libros: 'Volver al Inicio',
   };
+  
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>

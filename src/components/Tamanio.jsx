@@ -1,38 +1,34 @@
-// Emociones.jsx
+// Tamanio.jsx
 import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 
-const emocionesDisponibles = [
+const tamaniosDisponibles = [
   '150-300 Páginas', '300-450 Páginas', '450-650 Páginas', '650+ Páginas',
 ];
 
 const Tamanio = () => {
-  const { emocionesSeleccionadas, setEmocionesSeleccionadas } = useContext(AppContext);
+  const { tamanioSeleccionado, setTamanioSeleccionado } = useContext(AppContext);
 
-  const toggleEmocion = (emocion) => {
-    setEmocionesSeleccionadas((prev) =>
-      prev.includes(emocion)
-        ? prev.filter((e) => e !== emocion)
-        : [...prev, emocion]
+  const toggleTamanio = (tamanio) => {
+    setTamanioSeleccionado(prev =>
+      prev === tamanio ? '' : tamanio 
     );
   };
 
   return (
     <div>
-      <h2>¿Qué emociones buscas que te cause el libro?</h2>
+      <h2>¿Qué tamaño de libro prefieres?</h2>
       <div className='generos'>
-        {emocionesDisponibles.map((emocion, index) => (
+        {tamaniosDisponibles.map((tamanio, index) => (
           <div
             key={index}
-            onClick={() => toggleEmocion(emocion)}
+            onClick={() => toggleTamanio(tamanio)}
             className="generos-items"
             style={{
-                backgroundColor: emocionesSeleccionadas.includes(emocion)
-                  ? '#d3f8d3'
-                  : 'white',
-              }}
+              backgroundColor: tamanioSeleccionado === tamanio ? '#d3f8d3' : 'white',
+            }}
           >
-            {emocion}
+            {tamanio}
           </div>
         ))}
       </div>

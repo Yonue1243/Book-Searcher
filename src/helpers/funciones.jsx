@@ -2,12 +2,15 @@
 import React from 'react';
 import Inicio from '../components/inicio.jsx';
 import Emociones from '../components/Emociones.jsx';
+import Tamanio from '../components/Tamanio.jsx';
+import LibrosRecomendados from '../components/LibrosRecomendados.jsx';
 
 const vistas = {
   inicio: () => <Inicio />,
   emociones: () => <Emociones />,
-  otravista: () => <OtraVista />, // crea si no la tienes
-  final: () => <FinalVista />,    // idem
+  tamanio: () => <Tamanio />, // crea si no la tienes
+  libros: () => <LibrosRecomendados />,    // idem
+  
 };
 
 
